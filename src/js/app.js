@@ -5,7 +5,7 @@ import * as functions from "./modules/functions.js";
 functions.isWebp();
 
 // Исправление наложения нижней панели на смартфонах
-// functions.fullVHfix();
+functions.fullVHfix();
 
 // Скролл фиксированного header
 functions.headerScroll();

@@ -4,14 +4,17 @@
 	position: fixed;
 	width: 100%;
 	transition: transform 0.3s, background-color 0.3s;
-	background-color: $blueColor;
 	&.scroll {
+		background-color: $blueColor;
 		transform: translate(0, -100%);
 		.header__logo {
 			font-size: rem(24);
 		}
 		.header__body {
 			min-height: rem(60);
+		}
+		.header__input {
+			padding: rem(12) rem(56) rem(12) rem(15);
 		}
 	}
 	&.show {
@@ -33,6 +36,8 @@
 	}
 	// .header__logo
 	&__logo {
+		z-index: 5;
+		position: relative;
 		@media (max-width: $tablet) {
 			flex: 1 1 auto;
 		}
@@ -63,6 +68,7 @@
 		line-height: math.div(18, 16);
 		border-radius: rem(30);
 		padding: rem(14) rem(56) rem(14) rem(20);
+		transition: padding 0.3s;
 		&::placeholder {
 			color: $blueColor;
 		}
@@ -129,7 +135,7 @@
 			height: 100vh;
 			overflow: auto;
 			padding: rem(100) rem(15) rem(30) rem(15);
-			background-color: $mainColor;
+			background-color: $blueColor;
 			transition: visibility 0.3s, left 0.3s;
 			&::before {
 				content: "";
@@ -138,7 +144,7 @@
 				left: 100%;
 				width: 100%;
 				height: rem(60);
-				background-color: $mainColor;
+				background-color: $blueColor;
 				transition: left 0.3s;
 			}
 			&.menu--open {

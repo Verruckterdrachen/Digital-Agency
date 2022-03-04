@@ -1,3 +1,227 @@
 //================================================================================
+.hero {
+	position: relative;
+	display: flex;
+	background: linear-gradient(100.72deg, #122e99 -12.83%, #2370c8 104.22%);
+	// .hero__container
+	&__container {
+		display: flex;
+		align-items: center;
+		flex: 1 1 auto;
+	}
+	// .hero__body
+	&__body {
+		z-index: 5;
+		position: relative;
+		color: #fff;
+		padding: rem(90) 0;
+	}
+	// .hero__title
+	&__title {
+		max-width: rem(465);
+		font-weight: 500;
+		@include adaptiveValue("font-size", 72, 48);
+		line-height: math.div(85, 72);
+		margin-bottom: em(26, 72);
+	}
+	// .hero__text
+	&__text {
+		max-width: rem(422);
+		line-height: math.div(27, 16);
+		margin-bottom: em(40, 16);
+	}
+	// .hero__button
+	&__button {
+		@media (max-width: $mobileSmall) {
+			width: 100%;
+		}
+	}
+	// .hero__shape
+	&__shape {
+		position: absolute;
+		&:nth-child(1) {
+			opacity: 0.3;
+			top: percent(272, 790);
+			left: percent(25, 1920);
+		}
+		&:nth-child(2) {
+			opacity: 0.1;
+			top: percent(515, 790);
+			left: percent(35, 1920);
+		}
+		&:nth-child(3) {
+			opacity: 0.08;
+			top: percent(298, 790);
+			left: percent(50, 1920);
+		}
+		&:nth-child(4) {
+			opacity: 0.3;
+			top: percent(738, 790);
+			left: percent(87, 1920);
+		}
+		&:nth-child(5) {
+			opacity: 0.3;
+			top: percent(424, 790);
+			left: percent(138, 1920);
+		}
+		&:nth-child(6) {
+			opacity: 0.15;
+			top: percent(239, 790);
+			left: percent(148, 1920);
+		}
+		&:nth-child(7) {
+			opacity: 0.3;
+			top: percent(303, 790);
+			left: percent(237, 1920);
+		}
+		&:nth-child(8) {
+			opacity: 0.3;
+			top: percent(186, 790);
+			left: percent(242, 1920);
+		}
+		&:nth-child(9) {
+			opacity: 0.3;
+			top: percent(598, 790);
+			left: percent(349, 1920);
+		}
+		&:nth-child(10) {
+			opacity: 0.08;
+			top: percent(244, 790);
+			left: percent(354, 1920);
+		}
+		&:nth-child(11) {
+			opacity: 0.08;
+			top: percent(728, 790);
+			left: percent(423, 1920);
+		}
+		&:nth-child(12) {
+			opacity: 0.1;
+			top: percent(520, 790);
+			left: percent(494, 1920);
+		}
+		&:nth-child(13) {
+			opacity: 0.1;
+			top: percent(138, 790);
+			left: percent(548, 1920);
+		}
+		&:nth-child(14) {
+			opacity: 0.3;
+			top: percent(630, 790);
+			left: percent(598, 1920);
+		}
+		&:nth-child(15) {
+			top: percent(570, 790);
+			left: percent(795, 1920);
+		}
+		&:nth-child(16) {
+			opacity: 0.3;
+			top: percent(225, 790);
+			left: percent(800, 1920);
+		}
+		&:nth-child(17) {
+			opacity: 0.1;
+			top: percent(396, 790);
+			left: percent(866, 1920);
+		}
+		&:nth-child(18) {
+			opacity: 0.08;
+			top: percent(674, 790);
+			left: percent(908, 1920);
+		}
+		&:nth-child(19) {
+			opacity: 0.05;
+			top: percent(133, 790);
+			left: percent(923, 1920);
+		}
+		&:nth-child(20) {
+			top: percent(377, 790);
+			left: percent(923, 1920);
+		}
+		&:nth-child(21) {
+			top: percent(684, 790);
+			left: percent(1038, 1920);
+		}
+		&:nth-child(22) {
+			top: percent(133, 790);
+			left: percent(1059, 1920);
+		}
+		&:nth-child(23) {
+			opacity: 0.3;
+			top: percent(143, 790);
+			left: percent(1436, 1920);
+		}
+		&:nth-child(24) {
+			opacity: 0.3;
+			top: percent(480, 790);
+			left: percent(1592, 1920);
+		}
+		&:nth-child(25) {
+			top: percent(691, 790);
+			left: percent(1626, 1920);
+		}
+		&:nth-child(26) {
+			top: percent(528, 790);
+			left: percent(1634, 1920);
+		}
+		&:nth-child(27) {
+			opacity: 0.1;
+			top: percent(552, 790);
+			left: percent(1714, 1920);
+		}
+		&:nth-child(28) {
+			top: percent(107, 790);
+			left: percent(1714, 1920);
+		}
+		&:nth-child(29) {
+			opacity: 0.3;
+			top: percent(285, 790);
+			left: percent(1742, 1920);
+		}
+		&:nth-child(30) {
+			opacity: 0.2;
+			top: percent(559, 790);
+			left: percent(1804, 1920);
+		}
+		&:nth-child(31) {
+			top: percent(685, 790);
+			left: percent(1813, 1920);
+		}
+		&:nth-child(32) {
+			opacity: 0.5;
+			top: percent(193, 790);
+			left: percent(1814, 1920);
+		}
+		&:nth-child(33) {
+			opacity: 0.8;
+			top: percent(445, 790);
+			left: percent(1823, 1920);
+		}
+		&:nth-child(34) {
+			opacity: 0.3;
+			top: percent(71, 790);
+			left: percent(1833, 1920);
+		}
+	}
+	// .hero__shape--circle
+	&__shape--circle {
+		width: rem(10);
+		height: rem(10);
+		border-radius: 50%;
+		background-color: #fff;
+	}
+	// .hero__shape--line
+	&__shape--line {
+		width: rem(24);
+		height: rem(1);
+		background-color: #c7c7c7;
+	}
+	// .hero__shape--square
+	&__shape--square {
+		width: rem(20);
+		height: rem(20);
+		border: rem(1) solid #e1e1e1;
+	}
+}
+//================================================================================
 
 //================================================================================
