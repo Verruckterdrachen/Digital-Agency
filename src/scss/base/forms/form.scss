@@ -1,0 +1,17 @@
+//================================================================================
+.form__error {
+	margin-top: rem(10);
+	font-weight: 700;
+	font-size: rem(14);
+	color: tomato;
+}
+textarea {
+	resize: none;
+}
+input,
+textarea {
+	&.error {
+		border: rem(2) solid tomato;
+	}
+}
+//================================================================================

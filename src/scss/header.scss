@@ -1,0 +1,62 @@
+//================================================================================
+
+//================================================================================
+
+// &.scroll {
+// 	transform: translate(0, -100%);
+// }
+// &.scroll.show {
+// 	transform: translate(0, -100%);
+// }
+// &.show {
+// 	transform: translate(0, 0);
+// }
+
+// .menu-toggle {
+// 	display: none;
+// 	@media (max-width: $mobile) {
+// 		display: block;
+// 		position: relative;
+// 		flex: 0 0 rem(30);
+// 		width: rem(30);
+// 		height: rem(18);
+// 		cursor: pointer;
+// 		z-index: 5;
+// 		span,
+// 		&::before,
+// 		&::after {
+// 			content: "";
+// 			position: absolute;
+// 			left: 0;
+// 			width: 100%;
+// 			height: rem(2);
+// 			background-color: #fff;
+// 		}
+// 		&::before {
+// 			top: 0;
+// 			transition: top 0.3s, transform 0.3s;
+// 		}
+// 		&::after {
+// 			bottom: 0;
+// 			transition: bottom 0.3s, transform 0.3s;
+// 		}
+// 		span {
+// 			top: calc(50% - 1px);
+// 			transition: transform 0.3s;
+// 		}
+// 		&.menu-toggle--open {
+// 			span {
+// 				transform: scaleX(0);
+// 			}
+// 			&::before {
+// 				transform: rotate(-45deg);
+// 				top: calc(50% - 1px);
+// 			}
+// 			&::after {
+// 				transform: rotate(45deg);
+// 				bottom: calc(50% - 1px);
+// 			}
+// 		}
+// 	}
+// }
+//================================================================================
