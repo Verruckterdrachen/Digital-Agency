@@ -8,12 +8,12 @@ functions.isWebp();
 // functions.fullVHfix();
 
 // Скролл фиксированного header
-// functions.headerScroll();
+functions.headerScroll();
 
 // КОМПОНЕНТЫ ====================================================================
 
 // Бургер меню
-// import "./modules/components/headerMenu.js";
+import "./modules/components/headerMenu.js";
 
 // Попап
 // import "./modules/components/popup.js";
@@ -43,8 +43,11 @@ import * as forms from "./modules/forms.js";
 // Параллакс мышью
 import "./modules/parallax-mouse.js";
 
+// Динамический адаптив
+import "./modules/dynamic-adapt.js";
+
 // Анимация при скролле
 // import "./modules/scroll.js";
 
 // Свои скрипты
-// import "./modules/script.js";
+import "./modules/script.js";

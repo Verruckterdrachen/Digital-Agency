@@ -8,9 +8,11 @@ import { focusTrap, scrollLockToggle } from "../functions.js";
 function headerMenu() {
 	const menuToggle = document.querySelector('.menu-toggle');
 	if (menuToggle) {
-		const menu = document.querySelector('.menu');
+		const menu = document.querySelector('.menu__body');
 		menuToggle.addEventListener('click', menuStyles);
 		function menuStyles() {
+			const search = document.querySelector('.header__search');
+			search.classList.remove('active');
 			let expanded = 'false' === menuToggle.getAttribute('aria-expanded');
 			menuToggle.setAttribute('aria-expanded', expanded);
 			if (!expanded) {

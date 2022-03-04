@@ -65,7 +65,7 @@ export function scrollLockToggle() {
 
 // Блокировка скролла 
 export function headerScroll() {
-	// data-header-sctoll="show,point" - для header
+	// data-header-scroll="show,point" - для header
 	//  @show - скрывать ли шапку при скроле или нет
 	//   {true} - скрывать
 	//   {false} - не скрывать
@@ -84,8 +84,9 @@ export function headerScroll() {
 		if (scrollTop >= startPoint) {
 			!header.classList.contains('scroll') ? header.classList.add('scroll') : null;
 			if (headerShow == 'true') {
-				console.log(headerShow);
 				if (scrollTop > scrollDirection) {
+					const search = document.querySelector('.header__search');
+					search.classList.remove('active');
 					header.classList.contains('show') ? header.classList.remove('show') : null;
 				} else {
 					!header.classList.contains('show') ? header.classList.add('show') : null;

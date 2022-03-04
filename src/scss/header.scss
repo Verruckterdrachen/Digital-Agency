@@ -1,5 +1,231 @@
 //================================================================================
-
+.header {
+	z-index: 50;
+	position: fixed;
+	width: 100%;
+	transition: transform 0.3s, background-color 0.3s;
+	background-color: $blueColor;
+	&.scroll {
+		transform: translate(0, -100%);
+		.header__logo {
+			font-size: rem(24);
+		}
+		.header__body {
+			min-height: rem(60);
+		}
+	}
+	&.show {
+		transform: translate(0, 0);
+	}
+	// .header__body
+	&__body {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		min-height: rem(94);
+		padding: rem(5) 0;
+		color: #fff;
+		transition: min-height 0.3s;
+		@media (max-width: $tablet) {
+			min-height: rem(60);
+		}
+	}
+	// .header__logo
+	&__logo {
+		@media (max-width: $tablet) {
+			flex: 1 1 auto;
+		}
+	}
+	// .header__search
+	&__search {
+		z-index: 5;
+		position: relative;
+		@media (max-width: $mobileSmall) {
+			visibility: hidden;
+			position: absolute;
+			bottom: 0;
+			left: rem(-15);
+			width: calc(100% + 30px);
+			transition: visibility 0.3s, transform 0.3s;
+			transform: translate(0, -200%);
+			&.active {
+				visibility: visible;
+				transform: translate(0, 100%);
+			}
+		}
+	}
+	// .header__input
+	&__input {
+		max-width: rem(203);
+		color: $blueColor;
+		font-weight: 500;
+		line-height: math.div(18, 16);
+		border-radius: rem(30);
+		padding: rem(14) rem(56) rem(14) rem(20);
+		&::placeholder {
+			color: $blueColor;
+		}
+		@media (max-width: $tablet) {
+			padding: rem(12) rem(56) rem(12) rem(15);
+		}
+		@media (max-width: $mobileSmall) {
+			border-radius: 0;
+			width: 100%;
+			max-width: 100%;
+		}
+	}
+	// .header__icon
+	&__icon {
+		z-index: 5;
+		position: relative;
+		font-size: 0;
+		fill: #fff;
+		transition: fill 0.3s;
+		svg {
+			width: rem(20);
+			height: rem(20);
+		}
+		@media (min-width: $mobileSmall) {
+			display: none;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				fill: $blueLightColor;
+			}
+		}
+	}
+	// .header__button
+	&__button {
+		font-size: 0;
+		position: absolute;
+		top: 50%;
+		right: rem(20);
+		transform: translate(0, -50%);
+		fill: $blueColor;
+		transition: fill 0.3s;
+		svg {
+			width: rem(20);
+			height: rem(20);
+		}
+		@media (max-width: $tablet) {
+			right: rem(15);
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				fill: $mainColor;
+			}
+		}
+	}
+}
+.menu {
+	&__body {
+		@media (max-width: $tablet) {
+			visibility: hidden;
+			position: fixed;
+			top: 0;
+			left: 100%;
+			width: 100%;
+			height: 100vh;
+			overflow: auto;
+			padding: rem(100) rem(15) rem(30) rem(15);
+			background-color: $mainColor;
+			transition: visibility 0.3s, left 0.3s;
+			&::before {
+				content: "";
+				position: fixed;
+				top: 0;
+				left: 100%;
+				width: 100%;
+				height: rem(60);
+				background-color: $mainColor;
+				transition: left 0.3s;
+			}
+			&.menu--open {
+				left: 0;
+				visibility: visible;
+				&::before {
+					left: 0;
+				}
+			}
+		}
+	}
+	// .menu__list
+	&__list {
+		text-align: center;
+		@media (min-width: $tablet) {
+			display: flex;
+			justify-content: center;
+		}
+	}
+	// .menu__item
+	&__item {
+		margin: 0 rem(25);
+		@media (max-width: em(1200)) {
+			margin: 0 rem(15);
+		}
+		@media (max-width: $tablet) {
+			margin: 0 0 rem(35) 0;
+		}
+	}
+	// .menu__link
+	&__link {
+		text-transform: uppercase;
+		font-weight: 500;
+		line-height: math.div(18, 16);
+		@media (max-width: $tablet) {
+			font-size: rem(20);
+		}
+	}
+}
+.menu-toggle {
+	display: none;
+	@media (max-width: $tablet) {
+		display: block;
+		position: relative;
+		flex: 0 0 rem(30);
+		width: rem(30);
+		height: rem(18);
+		margin-left: rem(15);
+		cursor: pointer;
+		z-index: 5;
+		span,
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			width: 100%;
+			height: rem(2);
+			background-color: #fff;
+		}
+		&::before {
+			top: 0;
+			transition: top 0.3s, transform 0.3s;
+		}
+		&::after {
+			bottom: 0;
+			transition: bottom 0.3s, transform 0.3s;
+		}
+		span {
+			top: calc(50% - 1px);
+			transition: transform 0.3s;
+		}
+		&.menu-toggle--open {
+			span {
+				transform: scaleX(0);
+			}
+			&::before {
+				transform: rotate(-45deg);
+				top: calc(50% - 1px);
+			}
+			&::after {
+				transform: rotate(45deg);
+				bottom: calc(50% - 1px);
+			}
+		}
+	}
+}
 //================================================================================
 
 // &.scroll {

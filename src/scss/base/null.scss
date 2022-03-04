@@ -14,10 +14,10 @@ body {
 	min-width: $minWidth + px;
 }
 body {
-	color: $mainColor;
+	color: $textColor;
 	font-family: $fontFamily, sans-serif;
 	font-size: $fontSize;
-	line-height: math.div($fontSize, $lineHeight);
+	line-height: $lineHeight;
 	-ms-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
