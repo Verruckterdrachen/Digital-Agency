@@ -5,11 +5,12 @@
 
 // ПОДКЛЮЧЕНИЕ ШРИФТОВ ===========================================================
 //&display=swap
+@import url("https://fonts.googleapis.com/css?family=Roboto:regular,500,700,700&display=swap");
 
 // @import "fonts";
 
 // ПОДКЛЮЧЕНИЕ ШРИФТОВ ===========================================================
-$fontFamily: "";
+$fontFamily: "Roboto";
 $fontSize: rem(16);
 
 $mainColor: #000;
