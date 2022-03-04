@@ -1,3 +1,111 @@
 //================================================================================
+.footer {
+	background-color: $blueLightColor;
+	// .footer__top
+	&__top {
+		@include adaptiveValue("padding-top", 90, 30);
+		@include adaptiveValue("padding-bottom", 90, 30);
+		border-bottom: rem(1) solid #7ab8ff;
+	}
+	// .footer__body
+	&__body {
+		@media (min-width: $tablet) {
+			display: grid;
+			column-gap: rem(40);
+			grid-template-columns: 1fr percent(800, 1350);
+		}
+	}
+	// .footer__info
+	&__info {
+		@media (max-width: $tablet) {
+			margin-bottom: rem(30);
+		}
+	}
+	// .footer__logo
+	&__logo {
+		color: $blueColor;
+		margin-bottom: rem(7);
+	}
+	// .footer__text
+	&__text {
+		max-width: rem(365);
+	}
+	// .footer__menu
+	&__menu {
+		display: flex;
+		justify-content: space-between;
+		@media (max-width: em(520)) {
+			flex-direction: column;
+		}
+	}
+	// .footer__item
+	&__item {
+		@media (min-width: em(520)) {
+			margin-bottom: 0;
+			&:not(:last-child) {
+				margin-right: rem(20);
+			}
+		}
+		margin-bottom: rem(40);
+	}
+	// .footer__title
+	&__title {
+		position: relative;
+		color: $mainColor;
+		font-weight: 500;
+		font-size: rem(24);
+		line-height: math.div(28, 24);
+		margin-bottom: em(20, 24);
+		padding-bottom: rem(5);
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			height: rem(2);
+			border-radius: 5px;
+			background-color: $blueColor;
+		}
+		&::before {
+			bottom: 0;
+			width: rem(12);
+		}
+		&::after {
+			left: rem(18);
+			bottom: 0;
+			width: rem(28);
+		}
+	}
+	// .footer__bottom
+	&__bottom {
+		padding: rem(25) 0;
+	}
+	// .footer__copy
+	&__copy {
+		text-align: center;
+		color: rgba(#4b4b4b, 0.5);
+		line-height: math.div(18, 16);
+		span {
+			color: rgba(#2370c8, 0.5);
+		}
+	}
+}
+.list-footer {
+	// .list-footer__item
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: rem(18);
+		}
+	}
+	// .list-footer__link
+	&__link {
+		line-height: math.div(18, 16);
+		transition: color 0.3s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: $blueColor;
+			}
+		}
+	}
+}
 
 //================================================================================
