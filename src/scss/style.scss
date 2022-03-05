@@ -102,4 +102,10 @@ body {
 	&__portfolio {
 		@include adaptiveValue("padding-bottom", 180, 50);
 	}
+	// .page__team
+	&__team {
+		@include adaptiveValue("padding-top", 92, 40);
+		@include adaptiveValue("padding-bottom", 117, 50);
+		@include adaptiveValue("margin-bottom", 180, 50);
+	}
 }

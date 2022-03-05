@@ -490,4 +490,67 @@
 	}
 }
 //================================================================================
+.team {
+	background-color: $blueLightColor;
+	// .team__heading
+	&__heading {
+		margin-bottom: rem(46);
+	}
+	// .team__body
+	&__body {
+		display: grid;
+		@include adaptiveValue("gap", 50, 20);
+		grid-template-columns: repeat(3, 1fr);
+		@media (max-width: em(900)) {
+			grid-template-columns: 1fr 1fr;
+		}
+		@media (max-width: em(520)) {
+			grid-template-columns: 1fr;
+		}
+	}
+	// .team__item
+	&__item {
+		position: relative;
+		min-height: rem(450);
+		background-color: #e7e7e7;
+		@media (max-width: em(900)) {
+			min-height: rem(350);
+			@media (min-width: em(520)) {
+				&:last-child {
+					grid-column: span 2;
+				}
+			}
+		}
+	}
+	// .team__content
+	&__content {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: rem(360);
+		padding: rem(20) 0;
+		transform: translate(23px, 48px);
+		text-align: center;
+		background-color: #f2f9ff;
+		box-shadow: 0px 4px 24px 0px #d9edffcc;
+		@media (max-width: em(1200)) {
+			width: 100%;
+			transform: translate(0);
+		}
+	}
+	// .team__title
+	&__title {
+		font-weight: 500;
+		color: $mainColor;
+		font-size: rem(22);
+		line-height: math.div(25, 22);
+		margin-bottom: em(5, 22);
+	}
+	// .team__post
+	&__post {
+		text-transform: uppercase;
+		font-weight: 500;
+	}
+}
+//================================================================================
 //================================================================================
