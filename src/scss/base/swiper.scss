@@ -36,71 +36,34 @@
 	display: none !important;
 }
 //================================================================================
-.swiper-pagination {
-	&-bullets {
-		// display: flex;
-		// justify-content: center;
-		// align-items: center;
-	}
-	&-bullet {
-		cursor: pointer;
-		position: relative;
-		padding: rem(10);
-		&:not(:last-child) {
-			margin-right: rem(5);
-		}
-		&::before {
-			content: "";
-			display: block;
-			width: rem(10);
-			height: rem(10);
-			border-radius: 50%;
-			background-color: #000;
-			transition: background-color 0.3s;
-		}
-		&-active {
-			&::before {
-				background-color: #999;
-			}
-		}
-		@media (any-hover: hover) {
-			&:hover {
-				&::before {
-					background-color: #999;
-				}
-			}
-		}
-	}
-}
-//================================================================================
 .swiper-button {
 	// pointer-events: auto;
 	position: relative;
+	width: rem(45);
+	height: rem(45);
+	border-radius: 50%;
+	background-color: #e0e0e0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: rem(10);
-	// background-color: #000;
-	// transition: background-color 0.3s;
+	transition: background-color 0.3s;
 	&::before {
 		content: "";
 		display: block;
-		width: rem(20);
-		height: rem(20);
-		background-image: url("@img/icons/icons.svg#arrow-right");
-		background-repeat: no-repeat;
-		background-position: center;
-		transition: filter 0.3s;
-		// filter: invert(100%);
+		width: rem(12);
+		height: rem(12);
+		background-color: #898989;
+		mask-image: url("@img/icons/icons.svg#arrow-right");
+		transition: background-color 0.3s;
 	}
 	&-prev {
 		transform: rotate(180deg);
 	}
 	@media (any-hover: hover) {
 		&:hover {
-			// background-color: #999;
+			background-color: $blueColor;
 			&::before {
-				filter: invert(50%);
+				background-color: #fff;
 			}
 		}
 	}

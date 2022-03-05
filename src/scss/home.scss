@@ -223,5 +223,118 @@
 	}
 }
 //================================================================================
-
+.services {
+	// .services__heading
+	&__heading {
+		@media (min-width: em(1100)) {
+			margin-bottom: 0;
+			transform: translate(0, 50%);
+		}
+		@include adaptiveValue("margin-bottom", 100, 30);
+	}
+}
+.slider-services {
+	// .slider-services__body
+	&__body {
+		padding-bottom: rem(70);
+	}
+	// .slider-services__arrows
+	&__arrows {
+		display: flex;
+		justify-content: flex-end;
+		@include adaptiveValue("margin-bottom", 80, 30);
+		@media (max-width: em(1100)) {
+			position: absolute;
+			width: 100%;
+			bottom: 0;
+			margin-bottom: 0;
+			justify-content: center;
+		}
+	}
+	// .slider-services__arrow
+	&__arrow {
+		&:not(:last-child) {
+			margin-right: rem(30);
+		}
+	}
+}
+.swiper-slide {
+	position: relative;
+	text-align: center;
+	@include adaptiveValue("padding", 38, 15);
+	background-color: #e5f3fe;
+	border: rem(3) solid #cfeaff;
+	transition: background-color 0.3s, box-shadow 0.3s, border-color 0.3s;
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: #fff;
+			border-color: $blueColor;
+			box-shadow: 0px 4px 12px 0px #d2ebff;
+			.swiper-slide__button {
+				opacity: 1;
+				visibility: visible;
+				transition-delay: 0s;
+			}
+			.swiper-slide__text {
+				padding-bottom: rem(30);
+			}
+		}
+	}
+	// .swiper-slide__img
+	&__img {
+		width: rem(80);
+		height: rem(80);
+		margin: 0 auto;
+		border-radius: 50%;
+		background-color: #d1ebff;
+		margin-bottom: rem(28);
+	}
+	// .swiper-slide__title
+	&__title {
+		color: $mainColor;
+		font-weight: 500;
+		font-size: rem(20);
+		line-height: math.div(23, 20);
+		margin-bottom: em(14, 20);
+	}
+	// .swiper-slide__text
+	&__text {
+		transition: padding-bottom 0.3s;
+		padding-bottom: rem(47);
+	}
+	// .swiper-slide__button
+	&__button {
+		opacity: 0;
+		visibility: hidden;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translate(-50%, 50%);
+		width: rem(43);
+		height: rem(43);
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		background-color: $blueColor;
+		border-radius: 50%;
+		transition: visibility 0s 0.3s, opacity 0.3s;
+		&::before {
+			content: "";
+			display: block;
+			width: rem(12);
+			height: rem(12);
+			background-color: #fff;
+			mask-image: url("@img/icons/icons.svg#arrow-right-primary");
+			transition: background-color 0.3s, transform 0.3s;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				&::before {
+					transform: translate(25%, 0);
+				}
+			}
+		}
+	}
+}
+//================================================================================
 //================================================================================

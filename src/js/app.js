@@ -27,7 +27,7 @@ import "./modules/components/headerMenu.js";
 // БИБЛИОТЕКИ ====================================================================
 
 // Swiper
-// import "./modules/libs/sliders.js";
+import "./modules/libs/sliders.js";
 
 // РАБОТА С ФОРМАМИ ==============================================================
 import * as forms from "./modules/forms.js";

@@ -83,4 +83,9 @@ body {
 	// .page__hero
 	&__hero {
 	}
+	// .page__services
+	&__services {
+		@include adaptiveValue("padding-top", 130, 40);
+		@include adaptiveValue("padding-bottom", 140, 50);
+	}
 }

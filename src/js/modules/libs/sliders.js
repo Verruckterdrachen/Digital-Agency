@@ -6,38 +6,34 @@ window.addEventListener("load", function (e) {
 });
 
 function initSliders() {
-	if (document.querySelector('.slider-section')) {
-		const sectionSlider = new Swiper('.slider-section', {
-			modules: [Autoplay, Pagination, Navigation],
+	if (document.querySelector('.slider-services')) {
+		const servicesSlider = new Swiper('.slider-services', {
+			modules: [Autoplay, Navigation],
 			observer: true,
 			observeParents: true,
-			slidesPerView: 1,
-			spaceBetween: 0,
+			spaceBetween: 36,
 			autoHeight: true,
 			speed: 800,
 			loop: true,
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
-			pagination: {
-				el: '.slider-section__pagination',
-				clickable: true,
-			},
-			navigation: {
-				nextEl: '.slider-section__arrow .swiper-button-next',
-				prevEl: '.slider-section__arrow .swiper-button-prev',
-			},
-			// breakpoints: {
-			// 	320: {
-			// 	},
-			// 	768: {
-			// 	},
-			// 	992: {
-			// 	},
-			// 	1268: {
-			// 	},
+			// autoplay: {
+			// 	delay: 3000,
+			// 	disableOnInteraction: false,
 			// },
+			navigation: {
+				nextEl: '.slider-services__arrow.swiper-button-next',
+				prevEl: '.slider-services__arrow.swiper-button-prev',
+			},
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+				},
+				768: {
+					slidesPerView: 2,
+				},
+				992: {
+					slidesPerView: 3,
+				}
+			},
 		});
 	}
 }
