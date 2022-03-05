@@ -1169,14 +1169,64 @@ input[type=search]::-webkit-search-results-decoration {
   }
 }
 
-@supports (padding-top: clamp( 2.5rem , 0.8018867925rem  +  8.4905660377vw , 8.125rem )) {
-  .page__services {
-    padding-top: clamp( 2.5rem , 0.8018867925rem  +  8.4905660377vw , 8.125rem );
+@media (min-width: 47.99875em) {
+  .about__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
-@supports not (padding-top: clamp( 2.5rem , 0.8018867925rem  +  8.4905660377vw , 8.125rem )) {
-  .page__services {
-    padding-top: calc(
+.about__img {
+  padding-bottom: 53.9765319426%;
+  background-color: #e7e7e7;
+  margin: 0 -0.9375rem 1.875rem -0.9375rem;
+}
+@media (min-width: 47.99875em) {
+  .about__img {
+    margin: 0;
+    min-height: 32.125rem;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 43.4814814815%;
+            flex: 0 0 43.4814814815%;
+  }
+  @supports (margin-right: clamp( 0.0000000625rem , -2.4150942583rem  +  12.0754716038vw , 8rem )) {
+    .about__img {
+      margin-right: clamp( 0.0000000625rem , -2.4150942583rem  +  12.0754716038vw , 8rem );
+    }
+  }
+  @supports not (margin-right: clamp( 0.0000000625rem , -2.4150942583rem  +  12.0754716038vw , 8rem )) {
+    .about__img {
+      margin-right: calc(
+			0.0000000625rem + 7.9999999375 * (100vw - 20rem) / 66.25
+		);
+    }
+  }
+}
+.about__heading {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+.about__text {
+  margin-bottom: 2.25rem;
+}
+.about__text p:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+@supports (margin-bottom: clamp( 2.5rem , 0.8018867925rem  +  8.4905660377vw , 8.125rem )) {
+  .page__hero {
+    margin-bottom: clamp( 2.5rem , 0.8018867925rem  +  8.4905660377vw , 8.125rem );
+  }
+}
+@supports not (margin-bottom: clamp( 2.5rem , 0.8018867925rem  +  8.4905660377vw , 8.125rem )) {
+  .page__hero {
+    margin-bottom: calc(
 			2.5rem + 5.625 * (100vw - 20rem) / 66.25
 		);
   }
@@ -1190,6 +1240,18 @@ input[type=search]::-webkit-search-results-decoration {
   .page__services {
     padding-bottom: calc(
 			3.125rem + 5.625 * (100vw - 20rem) / 66.25
+		);
+  }
+}
+@supports (padding-bottom: clamp( 3.125rem , -1.0259433962rem  +  20.7547169811vw , 16.875rem )) {
+  .page__about {
+    padding-bottom: clamp( 3.125rem , -1.0259433962rem  +  20.7547169811vw , 16.875rem );
+  }
+}
+@supports not (padding-bottom: clamp( 3.125rem , -1.0259433962rem  +  20.7547169811vw , 16.875rem )) {
+  .page__about {
+    padding-bottom: calc(
+			3.125rem + 13.75 * (100vw - 20rem) / 66.25
 		);
   }
 }

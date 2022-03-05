@@ -82,10 +82,14 @@ body {
 .page {
 	// .page__hero
 	&__hero {
+		@include adaptiveValue("margin-bottom", 130, 40);
 	}
 	// .page__services
 	&__services {
-		@include adaptiveValue("padding-top", 130, 40);
 		@include adaptiveValue("padding-bottom", 140, 50);
+	}
+	// .page__about
+	&__about {
+		@include adaptiveValue("padding-bottom", 270, 50);
 	}
 }

@@ -337,4 +337,41 @@
 	}
 }
 //================================================================================
+.about {
+	// .about__container
+	&__container {
+		@media (min-width: $mobile) {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+	}
+	// .about__img
+	&__img {
+		padding-bottom: percent(414, 767);
+		background-color: #e7e7e7;
+		margin: 0 rem(-15) rem(30) rem(-15);
+		@media (min-width: $mobile) {
+			margin: 0;
+			min-height: rem(514);
+			flex: 0 0 percent(587, 1350);
+			@include adaptiveValue("margin-right", 128, 0);
+		}
+	}
+	// .about__heading
+	&__heading {
+		text-align: left;
+		margin-bottom: rem(32);
+	}
+	// .about__text
+	&__text {
+		margin-bottom: rem(36);
+		p {
+			&:not(:last-child) {
+				margin-bottom: rem(32);
+			}
+		}
+	}
+}
+//================================================================================
 //================================================================================
