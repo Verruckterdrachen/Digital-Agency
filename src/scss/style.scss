@@ -108,4 +108,8 @@ body {
 		@include adaptiveValue("padding-bottom", 117, 50);
 		@include adaptiveValue("margin-bottom", 180, 50);
 	}
+	// .page__pricing
+	&__pricing {
+		@include adaptiveValue("padding-bottom", 180, 50);
+	}
 }

@@ -53,6 +53,7 @@
 			left: rem(-15);
 			width: calc(100% + 30px);
 			transition: visibility 0.3s, transform 0.3s;
+			border-bottom: rem(1) solid $blueColor;
 			transform: translate(0, -200%);
 			&.active {
 				visibility: visible;
