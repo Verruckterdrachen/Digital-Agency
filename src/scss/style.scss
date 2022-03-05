@@ -118,4 +118,8 @@ body {
 		@include adaptiveValue("padding-bottom", 84, 50);
 		@include adaptiveValue("margin-bottom", 180, 50);
 	}
+	// .page__blog
+	&__blog {
+		@include adaptiveValue("padding-bottom", 178, 50);
+	}
 }

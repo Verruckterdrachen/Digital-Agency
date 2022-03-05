@@ -33,7 +33,7 @@ import "./modules/libs/sliders.js";
 import * as forms from "./modules/forms.js";
 
 // Валидация формы
-// forms.formFieldsInit();
+forms.formFieldsInit();
 
 // Отправка формы (Требуется подключение попапа)
 // forms.formSubmit();

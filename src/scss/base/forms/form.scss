@@ -17,19 +17,20 @@ input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
 	display: none;
 }
-// .form__error {
-// 	margin-top: rem(10);
-// 	font-weight: 700;
-// 	font-size: rem(14);
-// 	color: tomato;
-// }
+.form__error {
+	position: absolute;
+	bottom: rem(-30);
+	font-weight: 700;
+	font-size: rem(14);
+	color: tomato;
+}
 // textarea {
 // 	resize: none;
 // }
-// input,
-// textarea {
-// 	&.error {
-// 		border: rem(2) solid tomato;
-// 	}
-// }
+input,
+textarea {
+	&.error {
+		border: rem(2) solid tomato;
+	}
+}
 //================================================================================
