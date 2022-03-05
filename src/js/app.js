@@ -41,13 +41,13 @@ forms.formFieldsInit();
 // ПРОЧЕЕ ========================================================================
 
 // Параллакс мышью
-import "./modules/parallax-mouse.js";
+// import "./modules/parallax-mouse.js";
 
 // Динамический адаптив
 import "./modules/dynamic-adapt.js";
 
 // Анимация при скролле
-// import "./modules/scroll.js";
+import "./modules/scroll.js";
 
 // Свои скрипты
 import "./modules/script.js";

@@ -213,12 +213,14 @@
 	&__shape--line {
 		width: rem(24);
 		height: rem(1);
+		transform: rotate(133deg);
 		background-color: #c7c7c7;
 	}
 	// .hero__shape--square
 	&__shape--square {
 		width: rem(20);
 		height: rem(20);
+		transform: rotate(45deg);
 		border: rem(1) solid #e1e1e1;
 	}
 }
@@ -226,11 +228,9 @@
 .services {
 	// .services__heading
 	&__heading {
-		@media (min-width: em(1100)) {
-			margin-bottom: 0;
-			transform: translate(0, 50%);
+		@media (max-width: em(1100)) {
+			margin-bottom: rem(40);
 		}
-		@include adaptiveValue("margin-bottom", 100, 30);
 	}
 }
 .slider-services {

@@ -1048,32 +1048,23 @@ input[type=checkbox].toggle:checked::before {
 .hero__shape--line {
   width: 1.5rem;
   height: 0.0625rem;
+  -webkit-transform: rotate(133deg);
+      -ms-transform: rotate(133deg);
+          transform: rotate(133deg);
   background-color: #c7c7c7;
 }
 .hero__shape--square {
   width: 1.25rem;
   height: 1.25rem;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
   border: 0.0625rem solid #e1e1e1;
 }
 
-@media (min-width: 68.75em) {
+@media (max-width: 68.75em) {
   .services__heading {
-    margin-bottom: 0;
-    -webkit-transform: translate(0, 50%);
-        -ms-transform: translate(0, 50%);
-            transform: translate(0, 50%);
-  }
-}
-@supports (margin-bottom: clamp( 1.875rem , 0.554245283rem  +  6.6037735849vw , 6.25rem )) {
-  .services__heading {
-    margin-bottom: clamp( 1.875rem , 0.554245283rem  +  6.6037735849vw , 6.25rem );
-  }
-}
-@supports not (margin-bottom: clamp( 1.875rem , 0.554245283rem  +  6.6037735849vw , 6.25rem )) {
-  .services__heading {
-    margin-bottom: calc(
-			1.875rem + 4.375 * (100vw - 20rem) / 66.25
-		);
+    margin-bottom: 2.5rem;
   }
 }
 
