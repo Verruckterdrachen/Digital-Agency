@@ -354,6 +354,7 @@
 		@media (min-width: $mobile) {
 			margin: 0;
 			min-height: rem(514);
+			padding-bottom: 0;
 			flex: 0 0 percent(587, 1350);
 			@include adaptiveValue("margin-right", 128, 0);
 		}
@@ -374,4 +375,42 @@
 	}
 }
 //================================================================================
+.advantages {
+	background-color: $blueLightColor;
+	// .advantages__body
+	&__body {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		border-radius: rem(5);
+		padding-top: rem(42);
+		padding-bottom: rem(42);
+		flex-wrap: wrap;
+		@media (min-width: $mobileSmall) {
+			border: rem(5) solid #fff;
+		}
+	}
+	// .advantages__item
+	&__item {
+		max-width: rem(288);
+		text-align: center;
+		padding: rem(20);
+	}
+	// .advantages__icon
+	&__icon {
+		width: rem(80);
+		height: rem(80);
+		margin: 0 auto rem(22) auto;
+		border-radius: 50%;
+		background-color: #e7e7e7;
+	}
+	// .advantages__title
+	&__title {
+		font-weight: 500;
+		color: $mainColor;
+		font-size: rem(20);
+		line-height: math.div(23, 20);
+		margin-bottom: em(9, 20);
+	}
+}
 //================================================================================

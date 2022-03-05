@@ -92,4 +92,10 @@ body {
 	&__about {
 		@include adaptiveValue("padding-bottom", 270, 50);
 	}
+	// .page__advantages
+	&__advantages {
+		@include adaptiveValue("padding-top", 62, 20);
+		@include adaptiveValue("padding-bottom", 62, 20);
+		@include adaptiveValue("margin-bottom", 180, 50);
+	}
 }
