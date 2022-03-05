@@ -98,4 +98,8 @@ body {
 		@include adaptiveValue("padding-bottom", 62, 20);
 		@include adaptiveValue("margin-bottom", 180, 50);
 	}
+	// .page__portfolio
+	&__portfolio {
+		@include adaptiveValue("padding-bottom", 180, 50);
+	}
 }
