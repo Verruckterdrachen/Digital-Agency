@@ -1813,6 +1813,27 @@ input[type=checkbox].toggle:checked::before {
     }
 }
 
+  .pricing__body {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+@supports (gap: clamp( 0.9375rem , 0.5035377358rem  +  2.1698113208vw , 2.375rem )) {
+    .pricing__body {
+      gap: clamp( 0.9375rem , 0.5035377358rem  +  2.1698113208vw , 2.375rem );
+    }
+}
+
+@supports not (gap: clamp( 0.9375rem , 0.5035377358rem  +  2.1698113208vw , 2.375rem )) {
+    .pricing__body {
+      gap: calc(
+			0.9375rem + 1.4375 * (100vw - 20rem) / 66.25
+		);
+    }
+}
+
   .blog__body {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1870,27 +1891,6 @@ input[type=checkbox].toggle:checked::before {
     -ms-grid-columns: 1fr 59.2592592593%;
     grid-template-columns: 1fr 59.2592592593%;
   }
-
-  .pricing__body {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[3];
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-@supports (gap: clamp( 0.9375rem , 0.5035377358rem  +  2.1698113208vw , 2.375rem )) {
-    .pricing__body {
-      gap: clamp( 0.9375rem , 0.5035377358rem  +  2.1698113208vw , 2.375rem );
-    }
-}
-
-@supports not (gap: clamp( 0.9375rem , 0.5035377358rem  +  2.1698113208vw , 2.375rem )) {
-    .pricing__body {
-      gap: calc(
-			0.9375rem + 1.4375 * (100vw - 20rem) / 66.25
-		);
-    }
-}
 }
 
 @media (min-width: 68.75em) {
@@ -1946,14 +1946,6 @@ input[type=checkbox].toggle:checked::before {
     -webkit-transform: translate(0);
         -ms-transform: translate(0);
             transform: translate(0);
-  }
-}
-
-@media (max-width: 40em) {
-  .item-pricing {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 85%;
-            flex: 0 0 85%;
   }
 }
 
@@ -2130,17 +2122,6 @@ input[type=checkbox].toggle:checked::before {
   .footer__info {
     margin-bottom: 1.875rem;
   }
-
-  .item-pricing {
-    padding: 0.9375rem;
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 45%;
-            flex: 0 0 45%;
-  }
-
-  .item-pricing:not(:last-child) {
-    margin-right: 1.25rem;
-  }
 }
 
 @media (max-width: 56.25em) {
@@ -2163,6 +2144,17 @@ input[type=checkbox].toggle:checked::before {
 
   .slide-portfolio__text {
     font-size: 1.5rem;
+  }
+
+  .item-pricing {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 45%;
+            flex: 0 0 45%;
+    padding: 0.9375rem;
+  }
+
+  .item-pricing:not(:last-child) {
+    margin-right: 1.25rem;
   }
 
   .blog__info {
@@ -2229,6 +2221,12 @@ input[type=checkbox].toggle:checked::before {
 
   .hero__button {
     width: 100%;
+  }
+
+  .item-pricing {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 85%;
+            flex: 0 0 85%;
   }
 }
 

@@ -606,7 +606,7 @@
 		overflow: auto;
 		padding: rem(48);
 		margin: 0 rem(-48);
-		@media (min-width: $tablet) {
+		@media (min-width: $mobile) {
 			display: grid;
 			@include adaptiveValue("gap", 38, 15);
 			grid-template-columns: repeat(3, 1fr);
@@ -618,14 +618,14 @@
 	padding: rem(48) rem(24);
 	box-shadow: 0px 8px 48px 0px #b9d7ee66;
 	transition: background-color 0.3s;
-	@media (max-width: $tablet) {
-		padding: rem(15);
+	@media (max-width: $mobile) {
 		flex: 0 0 45%;
+		padding: rem(15);
 		&:not(:last-child) {
 			margin-right: rem(20);
 		}
 	}
-	@media (max-width: em(640)) {
+	@media (max-width: $mobileSmall) {
 		flex: 0 0 85%;
 	}
 	* {
